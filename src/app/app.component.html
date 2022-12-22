@@ -1,0 +1,10 @@
+<div class="container">
+  <app-books (bookAdded)="onBookAdded($event)"></app-books>
+  <hr />
+  <h3 class="pb-3">Books in catalog:</h3>
+  <div class="row mb-5">
+    <div class="col-md-4" *ngFor="let bookElement of bookElements">
+      <app-catalog [element]="bookElement"></app-catalog>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<form class="row g-3">
+    <div class="col-md-4">
+        <label for="bookName" class="form-label">Book Name:</label>
+        <!-- <input type="text" class="form-control" id="name" placeholder="Harry Potter" [(ngModel)]="newBookName" [ngModelOptions]="{standalone: true}" > -->
+        <input type="text" class="form-control" id="name" placeholder="Harry Potter" #bookNameInput >
+    </div>
+    <div class="col-md-4">
+        <label for="authorName" class="form-label">Author Name</label>
+        <input type="text" class="form-control" id="name" placeholder="J. K. Rowling" [(ngModel)]="newAuthorName" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="col-md-4">
+        <label for="imagePath" class="form-label">Image Url:</label>
+        <input type="text" class="form-control" id="name" placeholder="https://www.example.com/" [(ngModel)]="newBookImagePath" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="col-md-12">
+        <label for="description" class="form-label">Book Details:</label>
+        <textarea class="form-control" id="description" rows="3" placeholder="Book details goes here." [(ngModel)]="newDesc" [ngModelOptions]="{standalone: true}"></textarea>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" (click)="onBookAdd(bookNameInput)">Add Book</button>
+    </div>
+</form>
